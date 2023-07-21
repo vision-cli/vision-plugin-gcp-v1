@@ -7,7 +7,7 @@ import (
 
 	"github.com/vision-cli/common/execute"
 	"github.com/vision-cli/common/tmpl"
-	"github.com/vision-cli/vision-plugin-infra-v1/plugin"
+	"github.com/vision-cli/vision-plugin-gcp-v1/plugin"
 )
 
 func main() {

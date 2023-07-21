@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/vision-cli/common/mocks"
-	"github.com/vision-cli/vision-plugin-infra-v1/plugin"
+	"github.com/vision-cli/vision-plugin-gcp-v1/plugin"
 )
 
 func TestHandle_WithValidUsageInput_ReturnsUsageResponseString(t *testing.T) {

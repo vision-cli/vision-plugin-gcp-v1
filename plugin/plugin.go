@@ -7,8 +7,8 @@ import (
 	"github.com/vision-cli/common/execute"
 	"github.com/vision-cli/common/marshal"
 	"github.com/vision-cli/common/tmpl"
-	"github.com/vision-cli/vision-plugin-infra-v1/placeholders"
-	"github.com/vision-cli/vision-plugin-infra-v1/run"
+	"github.com/vision-cli/vision-plugin-gcp-v1/placeholders"
+	"github.com/vision-cli/vision-plugin-gcp-v1/run"
 )
 
 var Usage = api_v1.PluginUsageResponse{

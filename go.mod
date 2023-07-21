@@ -1,4 +1,4 @@
-module github.com/vision-cli/vision-plugin-infra-v1
+module github.com/vision-cli/vision-plugin-gcp-v1
 
 go 1.20
 
