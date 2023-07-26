@@ -15,8 +15,7 @@ module "db" {
   availability_type = "REGIONAL"
   disk_size         = var.db_vol_size
 
-  #uncomment below to make DB deleteable for critical changes, consider this for prod
-  #deletion_protection = false
+  deletion_protection = var.deletion_protection
 
   database_flags = [
     {
@@ -34,16 +33,15 @@ module "db" {
     allocated_ip_range  = null
   }
 
-# Dont enable backup for dev
-#   backup_configuration = {
-#     enabled                        = true
-#     start_time                     = "00:00"
-#     point_in_time_recovery_enabled = true
-#     location                       = var.region
-#     retained_backups               = 7
-#     retention_unit                 = "COUNT"
-#     transaction_log_retention_days = 6
-#   }
+    backup_configuration = {
+      enabled                        = var.deletion_protection
+      start_time                     = "00:00"
+      point_in_time_recovery_enabled = true
+      location                       = var.region
+      retained_backups               = 7
+      retention_unit                 = "COUNT"
+      transaction_log_retention_days = 6
+    }
 
   # try to avoid sqladmin service race-condition
   depends_on = [
@@ -51,5 +49,3 @@ module "db" {
     google_service_networking_connection.private_vpc_connection
   ]
 }
-
-# ------------------------------------------------------------

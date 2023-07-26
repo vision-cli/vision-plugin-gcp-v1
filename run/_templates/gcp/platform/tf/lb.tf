@@ -1,9 +1,9 @@
 module "http_lb" {
-  source            = "GoogleCloudPlatform/lb-http/google//modules/serverless_negs"
-  version           = "~> 9.0"
+  source  = "GoogleCloudPlatform/lb-http/google//modules/serverless_negs"
+  version = "~> 9.0"
 
-  project           = module.project.project_id
-  name              = "${var.environment}-http-lb"
+  project = module.project.project_id
+  name    = "${var.environment}-http-lb"
 
   ssl                             = true
   managed_ssl_certificate_domains = [var.domain]
@@ -13,8 +13,5 @@ module "http_lb" {
 
   backends = module.cloud_run.backends
 }
-
-
-# ------------------------------------------------------------
 
 

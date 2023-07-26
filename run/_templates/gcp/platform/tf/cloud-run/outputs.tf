@@ -5,24 +5,23 @@ output "urlmap" {
 output "backends" {
   value = {
     example = {
-      description                     = null
-      protocol                        = "HTTP"
-      port_name                       = "http"
-      enable_cdn                      = false
-      custom_request_headers          = null
-      custom_response_headers         = null
-      security_policy                 = null
-      compression_mode                = null
-
+      description             = null
+      protocol                = "HTTP"
+      port_name               = "http"
+      enable_cdn              = false
+      custom_request_headers  = null
+      custom_response_headers = null
+      security_policy         = null
+      compression_mode        = null
 
       log_config = {
-        enable = true
+        enable      = true
         sample_rate = 1.0
       }
 
       groups = [
         {
-            group = google_compute_region_network_endpoint_group.example_neg.id
+          group = google_compute_region_network_endpoint_group.example_neg.id
         },
       ]
 

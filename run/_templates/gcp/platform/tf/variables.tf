@@ -85,3 +85,7 @@ variable "db_vol_size" {
   default = 20
 }
 
+variable "deletion_protection" {
+  type    = bool
+  default = false
+}
