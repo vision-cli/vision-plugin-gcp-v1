@@ -71,6 +71,10 @@ You should already have this seed project from project create as you need the co
    - PROD_GCP_WORKLOAD_IDP - this is the idp for the prod workload (from step 4.3)
    - PROD_GCP_SERV_ACCOUNT - this is the service account for the prod workload (from step 4.3)
    - OAUTH2_CLIENT_SECRET - this is the oauth2 client secret from the seed project (step 1.2 above)
+
+5. Provision the follwing user rights:
+   - Project service account - Artifact registry writer in the seed project
+   - Service account robot - Artifact registry reader in the seed project
 `,
 	Subcommands:    []string{"create"},
 	Flags:          []api_v1.PluginFlag{},
